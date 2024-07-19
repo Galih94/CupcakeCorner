@@ -18,7 +18,7 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 100, height: 100)
             } placeholder: {
-                Color.gray
+                ProgressView()
             }
             List(results, id: \.trackId) { item in
                 VStack(alignment: .leading, content: {
