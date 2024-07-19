@@ -8,7 +8,7 @@
 import Foundation
 
 struct Result: Codable {
-    var trackedId: Int
+    var trackId: Int
     var trackName: String
     var collectionName: String
 }
