@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @State private var name: String = ""
     @State private var email: String = ""
+    var isDisable: Bool {
+        return name.isEmpty || email.isEmpty
+    }
+    
     var body: some View {
         Form {
             Section {
@@ -21,7 +25,7 @@ struct ContentView: View {
                     print("Confimation process...")
                 }
             }
-            .disabled(name.isEmpty || email.isEmpty)
+            .disabled(isDisable)
         }
     }
 }
