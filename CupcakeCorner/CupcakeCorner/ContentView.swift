@@ -17,13 +17,13 @@ struct ContentView: View {
                     image
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 100, height: 100)
                 } else if phase.error != nil {
                     Text("Error load image")
                 } else {
                     ProgressView()
                 }
             }
+            .frame(width: 100, height: 100)
             List(results, id: \.trackId) { item in
                 VStack(alignment: .leading, content: {
                     Text(item.trackName)
