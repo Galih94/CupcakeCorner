@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: "https://hws.dev/img/logo.png"))
+            AsyncImage(url: URL(string: "https://hws.dev/img/logo.png"), scale: 3)
                 .scaledToFill()
                 .frame(width: 100, height: 100)
             List(results, id: \.trackId) { item in
