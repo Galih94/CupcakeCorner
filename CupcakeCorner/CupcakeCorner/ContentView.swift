@@ -12,13 +12,17 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url:  URL(string: "https://hws.dev/img/logo.png"), scale: 3) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-            } placeholder: {
-                ProgressView()
+            AsyncImage(url:  URL(string: "https://hws.dev/img/logo.png"), scale: 3) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                } else if phase.error != nil {
+                    Text("Error load image")
+                } else {
+                    ProgressView()
+                }
             }
             List(results, id: \.trackId) { item in
                 VStack(alignment: .leading, content: {
