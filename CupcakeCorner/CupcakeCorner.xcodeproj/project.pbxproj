@@ -11,6 +11,7 @@
 		2A9FAC5B2C4A117A00246F9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FAC5A2C4A117A00246F9B /* ContentView.swift */; };
 		2A9FAC5D2C4A117B00246F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FAC5C2C4A117B00246F9B /* Assets.xcassets */; };
 		2A9FAC602C4A117B00246F9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FAC5F2C4A117B00246F9B /* Preview Assets.xcassets */; };
+		2A9FAC672C4A48D100246F9B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FAC662C4A48D100246F9B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2A9FAC5A2C4A117A00246F9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A9FAC5C2C4A117B00246F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9FAC5F2C4A117B00246F9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A9FAC662C4A48D100246F9B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				2A9FAC582C4A117A00246F9B /* CupcakeCornerApp.swift */,
+				2A9FAC662C4A48D100246F9B /* Model.swift */,
 				2A9FAC5A2C4A117A00246F9B /* ContentView.swift */,
 				2A9FAC5C2C4A117B00246F9B /* Assets.xcassets */,
 				2A9FAC5E2C4A117B00246F9B /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9FAC672C4A48D100246F9B /* Model.swift in Sources */,
 				2A9FAC5B2C4A117A00246F9B /* ContentView.swift in Sources */,
 				2A9FAC592C4A117A00246F9B /* CupcakeCornerApp.swift in Sources */,
 			);
