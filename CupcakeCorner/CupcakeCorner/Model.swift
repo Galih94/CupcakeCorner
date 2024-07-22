@@ -16,3 +16,11 @@ struct Result: Codable {
 struct Response: Codable {
     var results: [Result]
 }
+
+@Observable
+class User: Codable {
+    enum CodingKeys: String, CodingKey {
+        case _name = "name"
+    }
+    var name = "Taylor"
+}

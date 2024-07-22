@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello world")
+        Button("Encode Taylor", action: encodeTaylor)
+        
+    }
+    
+    private func encodeTaylor() {
+        let data = try! JSONEncoder().encode(User())
+        let str = String(decoding: data, as: UTF8.self)
+        print(str)
     }
 }
 
