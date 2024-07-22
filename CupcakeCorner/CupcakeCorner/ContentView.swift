@@ -14,7 +14,7 @@ struct ContentView: View {
         Button("Tap count \(counter)") {
             counter += 1
         }
-        .sensoryFeedback(.impact(flexibility: .soft, intensity: 0.5), trigger: counter)
+        .sensoryFeedback(.impact(weight: .heavy, intensity: 1), trigger: counter)
     }
 }
 
