@@ -24,3 +24,14 @@ class User: Codable {
     }
     var name = "Taylor"
 }
+
+@Observable
+class Order {
+    static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
+    var type = 0
+    var quantity = 3
+    
+    var specialRequestEnabled = false
+    var extraFrosting = false
+    var addSprinkles = false
+}
