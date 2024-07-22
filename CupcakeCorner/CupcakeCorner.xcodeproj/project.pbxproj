@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A46BCBE2C4E142C0039E4FC /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A46BCBD2C4E142C0039E4FC /* AddressView.swift */; };
 		2A9FAC592C4A117A00246F9B /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FAC582C4A117A00246F9B /* CupcakeCornerApp.swift */; };
 		2A9FAC5B2C4A117A00246F9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FAC5A2C4A117A00246F9B /* ContentView.swift */; };
 		2A9FAC5D2C4A117B00246F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FAC5C2C4A117B00246F9B /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A46BCBD2C4E142C0039E4FC /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		2A9FAC552C4A117A00246F9B /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FAC582C4A117A00246F9B /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		2A9FAC5A2C4A117A00246F9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				2A9FAC5A2C4A117A00246F9B /* ContentView.swift */,
 				2A9FAC5C2C4A117B00246F9B /* Assets.xcassets */,
 				2A9FAC5E2C4A117B00246F9B /* Preview Content */,
+				2A46BCBD2C4E142C0039E4FC /* AddressView.swift */,
 			);
 			path = CupcakeCorner;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9FAC672C4A48D100246F9B /* Model.swift in Sources */,
+				2A46BCBE2C4E142C0039E4FC /* AddressView.swift in Sources */,
 				2A9FAC5B2C4A117A00246F9B /* ContentView.swift in Sources */,
 				2A9FAC592C4A117A00246F9B /* CupcakeCornerApp.swift in Sources */,
 			);
