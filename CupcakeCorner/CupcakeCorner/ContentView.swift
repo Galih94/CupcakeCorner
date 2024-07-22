@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var counter = 0
+    
     var body: some View {
-        Text("Hello world")
+        Button("Tap count \(counter)") {
+            counter += 1
+        }
+        .sensoryFeedback(.increase, trigger: counter)
     }
 }
 
