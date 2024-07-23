@@ -25,6 +25,16 @@ class User: Codable {
     var name = "Taylor"
 }
 
+struct Address: Identifiable, Codable {
+    var id = UUID()
+    var name = ""
+    var streetAddress = ""
+    var city = ""
+    var zip = ""
+}
+
+let key = "key"
+
 @Observable
 class Order: Codable {
     enum CodingKeys: String, CodingKey {
@@ -33,10 +43,14 @@ class Order: Codable {
         case _specialRequestEnabled = "specialRequestEnabled"
         case _extraFrosting = "extraFrosting"
         case _addSprinkles = "addSprinkles"
-        case _name = "name"
-        case _streetAddress = "streetAddress"
-        case _city = "city"
-        case _zip = "zip"
+        case _address = "address"
+    }
+    
+    init() {
+        if let savedData = UserDefaults.standard.data(forKey: key),
+           let decoded = try? JSONDecoder().decode(Address.self, from: savedData) {
+            self.address = decoded
+        }
     }
     
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
@@ -54,16 +68,20 @@ class Order: Codable {
     var extraFrosting = false
     var addSprinkles = false
     
-    var name = ""
-    var streetAddress = ""
-    var city = ""
-    var zip = ""
+    var address: Address = Address() {
+        didSet {
+            if let data = try? JSONEncoder().encode(address) {
+                UserDefaults.standard.setValue(data, forKey: key)
+            }
+        }
+    }
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty || name.trimmingCharacters(in: .whitespaces).isEmpty ||
-            streetAddress.trimmingCharacters(in: .whitespaces).isEmpty ||
-            city.trimmingCharacters(in: .whitespaces).isEmpty ||
-            zip.trimmingCharacters(in: .whitespaces).isEmpty {
+        if address.name.isEmpty || address.streetAddress.isEmpty || address.city.isEmpty || address.zip.isEmpty ||
+            address.name.trimmingCharacters(in: .whitespaces).isEmpty ||
+            address.streetAddress.trimmingCharacters(in: .whitespaces).isEmpty ||
+            address.city.trimmingCharacters(in: .whitespaces).isEmpty ||
+            address.zip.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }
         return true
