@@ -24,6 +24,7 @@ struct CheckoutView: View {
     var order: Order
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
+    @State private var isError = false
     var body: some View {
         ScrollView {
             VStack {
@@ -41,7 +42,7 @@ struct CheckoutView: View {
         }
         .navigationTitle("Check Out")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("Thank you!", isPresented: $showingConfirmation, actions: {
+        .alert(isError ? "Error" :"Thank you!", isPresented: $showingConfirmation, actions: {
             Button("OK") {
                 showingConfirmation = false
             }
@@ -66,9 +67,14 @@ struct CheckoutView: View {
             
             let decodeOrder = try JSONDecoder().decode(Order.self, from: data)
             confirmationMessage = "Your order for \(decodeOrder.quantity) \(Order.types[decodeOrder.type]) cup cakes"
+            isError = false
             showingConfirmation = true
         } catch {
             print("Error checkout - \(error.localizedDescription)")
+            confirmationMessage = "Error checkout - \(error.localizedDescription)"
+            isError = true
+            showingConfirmation = true
+            
         }
     }
 }
