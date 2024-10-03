@@ -14,8 +14,10 @@ struct CustomImageView: View {
             image
                 .resizable()
                 .scaledToFit()
+                .accessibilityElement()
         } placeholder: {
             ProgressView()
+                .accessibilityElement()
         }
     }
 }
